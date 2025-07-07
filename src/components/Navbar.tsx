@@ -19,6 +19,12 @@ const Navbar: React.FC = () => {
         >
           <div className="self-stretch my-auto">Contact</div>
         </button>
+        <button 
+          onClick={() => navigate('/pricing')}
+          className="self-stretch flex min-h-[30px] items-center gap-2 text-[rgba(0,147,121,1)] whitespace-nowrap justify-center my-auto rounded-[20px] hover:text-[rgba(0,127,105,1)] transition-colors"
+        >
+          <div className="self-stretch my-auto">Pricing</div>
+        </button>
         <div className="self-stretch flex min-w-60 gap-5 my-auto max-md:max-w-full">
           <button className="bg-[rgba(229,244,242,1)] flex min-h-[60px] items-center gap-2 text-[rgba(0,147,121,1)] justify-center px-[50px] py-[18px] rounded-[20px] max-md:px-5 hover:bg-[rgba(219,239,237,1)] transition-colors">
             <div className="self-stretch my-auto">How it works</div>

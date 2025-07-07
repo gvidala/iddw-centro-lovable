@@ -1,5 +1,3 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -105,28 +103,3 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
-
-@layer components {
-  /* Star rating hover effect */
-  .testimonial-stars {
-    @apply flex gap-1;
-  }
-  
-  .testimonial-stars img {
-    @apply transition-all duration-200 cursor-pointer;
-  }
-  
-  .testimonial-stars img:hover {
-    @apply scale-110 drop-shadow-md;
-  }
-  
-  .testimonial-stars:hover img {
-    @apply opacity-60;
-  }
-  
-  .testimonial-stars img:hover,
-  .testimonial-stars img:hover ~ img {
-    @apply opacity-100;
-  }
-}
-

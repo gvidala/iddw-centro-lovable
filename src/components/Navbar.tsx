@@ -1,6 +1,10 @@
+
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <nav className="justify-between items-center flex w-full gap-[40px_100px] text-center flex-wrap bg-[#F8F9FF] px-[50px] py-5 max-md:max-w-full max-md:px-5">
       <div className="self-stretch flex items-center gap-1.5 text-[21px] text-[rgba(45,45,45,1)] font-bold leading-[1.3] my-auto">
@@ -9,9 +13,12 @@ const Navbar: React.FC = () => {
         </div>
       </div>
       <div className="self-stretch flex min-w-60 items-center gap-[40px_50px] text-base font-semibold flex-wrap my-auto max-md:max-w-full">
-        <div className="self-stretch flex min-h-[30px] items-center gap-2 text-[rgba(0,147,121,1)] whitespace-nowrap justify-center my-auto rounded-[20px]">
+        <button 
+          onClick={() => navigate('/contact')}
+          className="self-stretch flex min-h-[30px] items-center gap-2 text-[rgba(0,147,121,1)] whitespace-nowrap justify-center my-auto rounded-[20px] hover:text-[rgba(0,127,105,1)] transition-colors"
+        >
           <div className="self-stretch my-auto">Contact</div>
-        </div>
+        </button>
         <div className="self-stretch flex min-w-60 gap-5 my-auto max-md:max-w-full">
           <button className="bg-[rgba(229,244,242,1)] flex min-h-[60px] items-center gap-2 text-[rgba(0,147,121,1)] justify-center px-[50px] py-[18px] rounded-[20px] max-md:px-5 hover:bg-[rgba(219,239,237,1)] transition-colors">
             <div className="self-stretch my-auto">How it works</div>

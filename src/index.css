@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -101,5 +102,29 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Star rating hover effect */
+  .star-rating {
+    @apply flex gap-1;
+  }
+  
+  .star-rating img {
+    @apply transition-all duration-200 cursor-pointer;
+  }
+  
+  .star-rating img:hover {
+    @apply scale-110 drop-shadow-md;
+  }
+  
+  .star-rating:hover img {
+    @apply opacity-60;
+  }
+  
+  .star-rating img:hover,
+  .star-rating img:hover ~ img {
+    @apply opacity-100;
   }
 }

@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const LogoBar: React.FC = () => {
@@ -12,13 +13,13 @@ const LogoBar: React.FC = () => {
 
   return (
     <section className="self-center w-full pt-[60px] px-[55px] max-md:max-w-full max-md:px-5">
-      <div className="flex w-full items-center gap-[40px_100px] overflow-hidden justify-between flex-wrap py-10 border-[rgba(216,216,216,1)] border-t border-b max-md:max-w-full">
+      <div className="flex w-full items-center gap-[40px_100px] overflow-hidden justify-center flex-wrap py-10 border-[rgba(216,216,216,1)] border-t border-b max-md:max-w-full">
         {logos.map((logo, index) => (
           <img
             key={index}
             src={logo.src}
             alt={logo.alt}
-            className="aspect-[1] object-contain w-16 shadow-[0px_10px_20px_rgba(41,41,42,0.07)] self-stretch shrink-0 my-auto rounded-[100px]"
+            className="aspect-[1] object-contain w-16 shadow-[0px_10px_20px_rgba(41,41,42,0.07)] self-stretch shrink-0 my-auto rounded-[100px] transition-transform duration-300 hover:scale-[1.2] cursor-pointer"
           />
         ))}
       </div>

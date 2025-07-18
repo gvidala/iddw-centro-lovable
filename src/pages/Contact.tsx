@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { useNavigate } from 'react-router-dom';
+import Navbar from '@/components/Navbar';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -15,7 +15,6 @@ const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  const navigate = useNavigate();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -60,22 +59,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="bg-[rgba(248,249,255,1)] min-h-screen flex flex-col">
-      {/* Navigation Header */}
-      <nav className="justify-between items-center flex w-full gap-[40px_100px] text-center flex-wrap bg-[#F8F9FF] px-[50px] py-5 max-md:max-w-full max-md:px-5">
-        <div className="self-stretch flex items-center gap-1.5 text-[21px] text-[rgba(45,45,45,1)] font-bold leading-[1.3] my-auto">
-          <div className="self-stretch my-auto">
-            Landing<span className="font-normal">Page</span>
-          </div>
-        </div>
-        <div className="self-stretch flex min-w-60 items-center gap-[40px_50px] text-base font-semibold flex-wrap my-auto max-md:max-w-full">
-          <button 
-            onClick={() => navigate('/')}
-            className="self-stretch flex min-h-[30px] items-center gap-2 text-[rgba(0,147,121,1)] whitespace-nowrap justify-center my-auto rounded-[20px] hover:text-[rgba(0,127,105,1)] transition-colors"
-          >
-            <div className="self-stretch my-auto">Back to Home</div>
-          </button>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Contact Section */}
       <main className="flex-1 flex items-center justify-center px-[50px] py-20 max-md:px-5">

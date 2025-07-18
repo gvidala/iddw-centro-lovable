@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -20,6 +19,12 @@ const Navbar: React.FC = () => {
             alt="Get Started Icon"
           />
           <div className="text-white self-stretch my-auto">Get Started</div>
+        </button>
+        <button 
+          onClick={() => navigate('/subscribe')}
+          className="self-stretch flex min-h-[30px] items-center gap-2 text-[rgba(0,147,121,1)] whitespace-nowrap justify-center my-auto rounded-[20px] hover:text-[rgba(0,127,105,1)] transition-colors"
+        >
+          <div className="self-stretch my-auto">Subscribe</div>
         </button>
         <button 
           onClick={() => navigate('/contact')}

@@ -68,9 +68,26 @@ const Contact: React.FC = () => {
             <h1 className="text-[48px] font-bold text-[rgba(45,45,45,1)] leading-[1.2] mb-6 max-md:text-[36px]">
               Get In Touch
             </h1>
-            <p className="text-lg text-[rgba(45,45,45,0.7)] leading-relaxed">
+            <p className="text-lg text-[rgba(45,45,45,0.7)] leading-relaxed mb-8">
               Have questions or want to learn more? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
             </p>
+            
+            {/* YouTube Video */}
+            <div className="flex justify-center mb-12">
+              <div className="w-full max-w-2xl aspect-video">
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src="https://www.youtube.com/embed/sFIDCtRX_-o?si=LdHRA3R2Vxs9_9qz" 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                  className="rounded-[20px] shadow-[34.854px_29.626px_48.34px_0px_rgba(51,102,255,0.05)]"
+                />
+              </div>
+            </div>
           </div>
 
           <div className="bg-white rounded-[20px] shadow-[34.854px_29.626px_48.34px_0px_rgba(51,102,255,0.05)] border border-[#E5F4F2] p-10 max-md:p-6">

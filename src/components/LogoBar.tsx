@@ -1,25 +1,56 @@
 import React from 'react';
 
 const LogoBar: React.FC = () => {
-  const logos = [
-    { src: "https://cdn.builder.io/api/v1/image/assets/97d9ded634ec40d18877fc631e7e66a8/96278817b054d0a96f87922bac7a1620a9a06a54?placeholderIfAbsent=true", alt: "Company Logo 1" },
-    { src: "https://cdn.builder.io/api/v1/image/assets/97d9ded634ec40d18877fc631e7e66a8/6714a4c3612d0b1b3f08eca99704736a5bdca39b?placeholderIfAbsent=true", alt: "Company Logo 2" },
-    { src: "https://cdn.builder.io/api/v1/image/assets/97d9ded634ec40d18877fc631e7e66a8/f695be995b66c7c7931782542c87a0a6ea1515ba?placeholderIfAbsent=true", alt: "Company Logo 3" },
-    { src: "https://cdn.builder.io/api/v1/image/assets/97d9ded634ec40d18877fc631e7e66a8/9968c5675aed095082c47ac6b88f9e6d68728748?placeholderIfAbsent=true", alt: "Company Logo 4" },
-    { src: "https://cdn.builder.io/api/v1/image/assets/97d9ded634ec40d18877fc631e7e66a8/c986b9d855a38fc1cc7b770f0fe69977de59f31a?placeholderIfAbsent=true", alt: "Company Logo 5" },
-    { src: "https://cdn.builder.io/api/v1/image/assets/97d9ded634ec40d18877fc631e7e66a8/243c6700225cd5ab8c972820932606d53a19536d?placeholderIfAbsent=true", alt: "Company Logo 6" },
+  const metaPlatforms = [
+    { 
+      src: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg", 
+      alt: "Facebook", 
+      url: "https://www.facebook.com" 
+    },
+    { 
+      src: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png", 
+      alt: "Instagram", 
+      url: "https://www.instagram.com" 
+    },
+    { 
+      src: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg", 
+      alt: "Twitter", 
+      url: "https://www.twitter.com" 
+    },
+    { 
+      src: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png", 
+      alt: "LinkedIn", 
+      url: "https://www.linkedin.com" 
+    },
+    { 
+      src: "https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg", 
+      alt: "Messenger", 
+      url: "https://www.messenger.com" 
+    },
+    { 
+      src: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg", 
+      alt: "WhatsApp", 
+      url: "https://www.whatsapp.com" 
+    },
   ];
 
   return (
     <section className="self-center w-full pt-[60px] px-[55px] max-md:max-w-full max-md:px-5">
       <div className="flex w-full items-center gap-[40px_100px] overflow-hidden justify-between flex-wrap py-10 border-[rgba(216,216,216,1)] border-t border-b max-md:max-w-full">
-        {logos.map((logo, index) => (
-          <img
+        {metaPlatforms.map((platform, index) => (
+          <a
             key={index}
-            src={logo.src}
-            alt={logo.alt}
-            className="aspect-[1] object-contain w-16 shadow-[0px_10px_20px_rgba(41,41,42,0.07)] self-stretch shrink-0 my-auto rounded-[100px]"
-          />
+            href={platform.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform duration-200"
+          >
+            <img
+              src={platform.src}
+              alt={platform.alt}
+              className="aspect-[1] object-contain w-16 shadow-[0px_10px_20px_rgba(41,41,42,0.07)] self-stretch shrink-0 my-auto rounded-[100px]"
+            />
+          </a>
         ))}
       </div>
     </section>

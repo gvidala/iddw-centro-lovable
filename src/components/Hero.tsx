@@ -5,10 +5,10 @@ const Hero: React.FC = () => {
     <section className="items-stretch flex w-full flex-col text-center bg-[#F8F9FF] pt-[120px] pb-[60px] px-[55px] max-md:max-w-full max-md:pt-[100px] max-md:px-5">
       <header className="flex w-full flex-col overflow-hidden text-[#2D2D2D] max-md:max-w-full">
         <h1 className="text-[#2D2D2D] text-[90px] font-bold leading-[117px] tracking-[-2.25px] max-md:max-w-full max-md:text-[40px] max-md:leading-[58px]">
-          Build Landing Pages with Typeform embedded
+          Introducción al diseño y desarrollo web 2025
         </h1>
         <p className="text-[#2D2D2D] text-[28px] font-normal leading-[1.4] mt-5 max-md:max-w-full">
-          With Anima, you can embed Typeform in just a few steps.
+          Especialidad en Visualización de datos
         </p>
       </header>
       <div className="self-center flex gap-[18px] text-base text-white font-semibold justify-center mt-10">
